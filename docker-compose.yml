@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  database:
+    container_name: shopify-backend-challenge-database
+    image: postgres:14.1
+    restart: always
+    volumes:
+      - database:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+  server:
+    container_name: shopify-backend-challenge-server
+    depends_on:
+      - database
+    links:
+      - database
+    build: ./server
+    ports:
+      - "3000:3000"
+  client:
+    container_name: shopify-backend-challenge-client
+    depends_on:
+      - server
+    build: ./client
+    ports:
+      - "4200:80"
+
+volumes:
+  database:
+    driver: local
