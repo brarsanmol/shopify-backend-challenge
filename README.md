@@ -2,7 +2,7 @@
 
 ## Usage
 - Clone The Repository With Submodules
-   - `git clone --recurse-submodules --remote-submodules`
+   - `git clone --recurse-submodules --remote-submodules https://github.com/brarsanmol/shopify-backend-challenge.git`
 - Ensure you have [Node.js](https://nodejs.org/en/) installed on your machine.
 - `cd` into both the client and server folder and run `npm install`
 - Ensure that you have [PostgresSQL](https://www.postgresql.org/download/) installed on your machine.
