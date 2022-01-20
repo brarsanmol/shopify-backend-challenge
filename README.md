@@ -6,7 +6,7 @@
 - Ensure you have [Node.js](https://nodejs.org/en/) installed on your machine.
 - `cd` into both the client and server folder and run `npm install`
 - Ensure that you have [PostgresSQL](https://www.postgresql.org/download/) installed on your machine.
-- Create a file called `.env.development` in the server folder and paste the following in. 
+- Create a file called `.env.development` in the server folder and paste the following in. **Configure this accordingly to your POSTGRES settings**
 
 ```PORT = 4000 # Server Port
 CLIENT_ADDRESS = http://localhost:3000 # Frontend Address
